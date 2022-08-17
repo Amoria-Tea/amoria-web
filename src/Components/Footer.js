@@ -41,7 +41,7 @@ function Footer(props) {
       <p class="text-xs sm:text-sm  text-center text-gray-400 lg:text-center">
        Copyright &copy; 2022
       </p>
-      <div class="text-xs sm:text-sm text-center text-gray-400 sm:text-right"> mike.amoria@gmail.com
+      <div class="text-xs sm:text-sm text-center text-gray-400 sm:text-right"> mike@amoriatea.com
       </div>
     </div>
     </div>

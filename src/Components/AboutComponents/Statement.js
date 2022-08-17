@@ -1,5 +1,4 @@
 import React from 'react';
-import TeaMaking from '../SiteImg/man-making-tea.jpg'
 
 function Statement(props) {
 // ToDo
@@ -22,7 +21,7 @@ function Statement(props) {
         </p>
         </div>
         <div className="man-making-tea-container">
-        <img className='tea-making-man' src={TeaMaking} alt="man making tea"/>
+        <img className='tea-making-man' src={"https://i.imgur.com/p8d4neA.jpeg"} alt="man making tea"/>
         </div>
         </div>
         </div>

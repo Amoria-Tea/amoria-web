@@ -1,5 +1,4 @@
 import React from 'react';
-import Strawberry from '../Categories/BubbleTeaImg/Strawberry MatchaLatte 1.jpg';
 
 function DecorationBanner(props) {
     
@@ -11,7 +10,7 @@ function DecorationBanner(props) {
 >
   <img
     class="group-hover:scale-105 transition-transform duration-500 object-cover w-full h-[400px] sm:h-[700px]"
-    src={Strawberry}
+    src={"https://i.imgur.com/BQOAQ12.jpeg"}
     alt="Basic Tee Product"
   />
 </div>
