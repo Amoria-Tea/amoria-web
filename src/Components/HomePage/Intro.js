@@ -5,7 +5,7 @@ function Intro(props) {
     return (
         <>
         <div className='poppins-header-responsive'>
-            The Premier Tea Shop in NJ
+            Your local source for Premium Tea
         </div>
         <StatementChanger></StatementChanger>
         </>

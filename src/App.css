@@ -17,8 +17,6 @@ strong {
   font-size: 45px;
 }
 
-.about-container {}
-
 .about-container-comic {
   background-color: #f3e0c2;
 }
@@ -105,7 +103,6 @@ strong {
   background-color: #f3e0c2;
 }
 
-.tea-making-man {}
 
 .poppins-bolded {
   display: flex;
@@ -223,7 +220,7 @@ strong {
     font-size: 25px;
     font-weight: 700;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .poppins-bolded {

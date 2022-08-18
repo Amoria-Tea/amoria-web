@@ -1,10 +1,4 @@
 import React from 'react';
-import Rose from '../BubbleTeaImg/RoseGarden.jpg';
-import Strawberry from '../BubbleTeaImg/Strawberry MatchaLatte 1.jpg';
-import Strawberry2slush from '../BubbleTeaImg/Strawberry Slush 3.jpg'
-import Ube from '../BubbleTeaImg/UbeLatte1.jpg';
-import Item from '../menudata';
-import { Link } from "react-router-dom";
 
 function ItemMenus(props) {
 
@@ -16,8 +10,8 @@ function ItemMenus(props) {
 >
   <img
     class="group-hover:scale-105 transition-transform duration-500 object-cover w-full h-[350px] sm:h-[450px]"
-    src={Strawberry}
-    alt="Basic Tee Product"
+    src={"https://i.imgur.com/vTHCGGG.jpg"}
+    alt="Basic Tea Product"
   />
 
   <div class="relative pt-4 bg-white">
