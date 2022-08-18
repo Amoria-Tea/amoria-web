@@ -3,12 +3,9 @@ import StatementChanger from './StatementChanger';
 
 function Intro(props) {
     return (
-        <>
-        <div className='poppins-header-responsive'>
-            Your local source for Premium Tea
-        </div>
+        <div className="grayLoadMain fade-in">
         <StatementChanger></StatementChanger>
-        </>
+        </div>
     );
 }
 

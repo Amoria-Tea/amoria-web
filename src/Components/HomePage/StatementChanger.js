@@ -20,7 +20,8 @@ function StatementChanger(props) {
     //Attribution: https://stackoverflow.com/questions/65504562/change-text-every-3-seconds-react-useeffect
 
     return (
-        <div className='background-cream'>
+        <div className="bg-Img-landing">
+            <h1 className="poppins">Your local source for Premium Tea </h1>
             <h3 className='poppins-change'>{headingStatement[index]}</h3> 
         </div>
     );

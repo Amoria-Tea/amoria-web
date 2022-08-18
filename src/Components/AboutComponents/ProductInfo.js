@@ -4,7 +4,7 @@ import Comic from 'Components/AboutComponents/Comic';
 function ProductInfo(props) {
     return (
         <div class='flex'>
-        <div className="about-container-comic">
+        <div className="about-container-comic fade-in">
         <div class='flex flex-col sm:flex-row-reverse'>
         <div class="-mt-2 ml-1 text-sm sm:text-xl md:text-2xl lg:text-4xl">
         <br/>
