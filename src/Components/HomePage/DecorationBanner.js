@@ -1,7 +1,6 @@
 import React from 'react';
 
 function DecorationBanner(props) {
-    
     return (
 <div>
 <div

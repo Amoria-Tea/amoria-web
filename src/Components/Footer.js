@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Logo from './SiteImg/Amoria-Tea-Cup-Logos-Vertical.svg';
 
 function Footer(props) {
@@ -33,9 +33,9 @@ function Footer(props) {
         </ul>
       </nav>
   
-      <div class="flex sm:flex-row flex-col justify-between mt-12">
-      <div class="flex text-xs sm:text-sm  text-center text-gray-400 lg:text-left">
-      <img class="h-12 mb-4" src={Logo} alt="Logo"/> 
+      <div class="flex sm:flex-row flex-col items-center justify-between mt-8">
+      <div class="flex text-xs sm:text-sm  items-center text-center text-gray-400 lg:text-left">
+      <img class="h-12 mb-4 mr-2" src={Logo} alt="Logo"/> 
       See you soon!
       </div>
       <p class="text-xs sm:text-sm  text-center text-gray-400 lg:text-center">
