@@ -9,7 +9,7 @@ function Statement(props) {
         <>
         <div className="about-container fade-in">
             <div class='flex flex-col sm:flex-row '>
-                <div class="ml-1 text-sm sm:text-xl md:text-2xl lg:text-4xl">
+                <div class="ml-1 text-sm sm:text-xl md:text-2xl md:ml-5 md:mt-5 md:mr-5 lg:text-4xl">
                     <br/>
                         <strong className='poppins-bolded-responsive'> <span className='poppins-bolded-responsive'>We are Amoria Tea..</span> </strong> 
                     <br/>

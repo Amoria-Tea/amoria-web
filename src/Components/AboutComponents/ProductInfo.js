@@ -1,5 +1,5 @@
 import React from 'react';
-import Comic from './Comic';
+import Comic from 'Components/AboutComponents/Comic';
   
 function ProductInfo(props) {
     return (
