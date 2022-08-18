@@ -14,7 +14,7 @@ function Statement(props) {
                         <strong className='poppins-bolded-responsive'> <span className='poppins-bolded-responsive'>We are Amoria Tea..</span> </strong> 
                     <br/>
                         <p class="mb-2 sm:-mt-4">
-                        an up and coming environmentally conscious and consumer health conscious bubble tea shop based in NJ. 
+                        an up and coming environmentally conscious and experience oriented bubble tea shop here in NJ. 
                         </p>
                 </div>
                 <div className="man-making-tea-container">
