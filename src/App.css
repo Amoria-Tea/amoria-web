@@ -103,6 +103,9 @@ strong {
   background-color: #f3e0c2;
 }
 
+.tea-making-man {
+  border-top-left-radius: 0px;
+}
 
 .poppins-bolded {
   display: flex;
@@ -234,6 +237,16 @@ strong {
   .border-bottom-our-story {
     border-bottom: 0px;
   }
+
+  .tea-making-man {
+    border-top-left-radius: 100px;
+  }
+
+  .man-making-tea-container {
+    display: flex;
+    width: 150%;
+    margin-top: 25px;
+  }
 }
 
 
@@ -245,6 +258,12 @@ strong {
     font-size: 72px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+  }
+
+  .man-making-tea-container {
+    display: flex;
+    width: 125%;
+    margin-top: 25px;
   }
 
   .maven {
@@ -293,10 +312,6 @@ strong {
 
   .border-bottom-our-story {
     border-bottom: 0px;
-  }
-
-  .tea-making-man {
-    border-top-left-radius: 100px;
   }
 }
 
@@ -374,7 +389,7 @@ strong {
   .man-making-tea-img {
     display: block;
     height: 50%;
-    width: 50%;
+    width: 100%;
     margin-top: auto;
     margin-bottom: auto;
   }
