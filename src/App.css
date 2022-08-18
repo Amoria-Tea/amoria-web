@@ -105,6 +105,8 @@ strong {
   background-color: #f3e0c2;
 }
 
+.tea-making-man {}
+
 .poppins-bolded {
   display: flex;
   justify-content: center;
@@ -294,6 +296,10 @@ strong {
 
   .border-bottom-our-story {
     border-bottom: 0px;
+  }
+
+  .tea-making-man {
+    border-top-left-radius: 100px;
   }
 }
 
