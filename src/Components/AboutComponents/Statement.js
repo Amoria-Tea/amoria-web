@@ -7,11 +7,8 @@ function Statement(props) {
 
     return (
         <>
-        <h1 className='poppins-bolded'>
-        <span className="border-bottom-our-story"> Our Story </span>
-        </h1>
         <div className="about-container">
-        <div class='flex flex-col sm:flex-row'>
+        <div class='flex flex-col sm:flex-row '>
         <div class="ml-1 text-sm sm:text-xl md:text-2xl lg:text-4xl">
         <br/>
         <strong className='poppins-bolded-responsive'> <span className='poppins-bolded-responsive'>We are Amoria Tea..</span> </strong> 
