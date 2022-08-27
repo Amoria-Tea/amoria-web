@@ -5,8 +5,8 @@ function ProductInfo(props) {
     return (
         <div class='flex'>
         <div className="about-container-comic fade-in">
-        <div class='flex flex-col sm:flex-row-reverse'>
-        <div class="-mt-2 ml-1 text-sm sm:text-xl md:text-2xl lg:text-4xl">
+        <div class='flex flex-col sm:flex-row-reverse sm:justify-center sm:items-center'>
+        <div class="-mt-2 ml-1 text-sm sm:mb-24 sm:text-xl md:mb-30 md:text-2xl lg:text-4xl lg:mb-40">
         <br/>
         <strong className='poppins-bolded-responsive'> <span className="poppins-bolded-responsive"> No. Powders. Ever</span> </strong> 
         <br/>
@@ -15,7 +15,7 @@ function ProductInfo(props) {
         </p>
         </div>
         <div className="comic-container">
-         <Comic></Comic>
+        <Comic></Comic>
         </div>
         </div>
         </div>
