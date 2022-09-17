@@ -8,6 +8,7 @@ import About from './Components/AboutComponents/About'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DecorationBanner from './Components/HomePage/DecorationBanner';
 import Intro from './Components/HomePage/Intro';
+import DynamicMenu from 'Components/MenuComponents/DynamicMenu';
 
 function App() {
 //ToDo: Ctrl Shift F 
@@ -32,6 +33,7 @@ function App() {
       </Routes>
       <Footer></Footer>
       </BrowserRouter>
+      {/* <DynamicMenu></DynamicMenu> */}
     </div>
   );
 }

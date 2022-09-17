@@ -1,8 +1,7 @@
 import React, { useState }  from 'react';
 import 'Components/fade-in.css';
-import MenuModal from './MenuModal';
 import Modal from 'react-modal'
-import FsLightbox from 'fslightbox-react';
+// import FsLightbox from 'fslightbox-react';
 
 function Menu(props) {
  const [toggler, setToggler] = useState(false);

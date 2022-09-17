@@ -14,8 +14,8 @@ const closeOut = () => {
 return (
 <div className={closed} class="fixed w-full px-4 py-3 text-white bg-indigo-600 pr-14 opacity-90">
   <p class="text-xs sm:text-sm font-medium text-left sm:text-center">
-    Find us next at Hopatcong Marketplace 9/10
-    <a class="underline text-xs sm:text-sm" href="https://www.facebook.com/VendorsoftheHopatcongMarketPlace/" target="_blank" rel="noreferrer"> Learn More &rarr; </a>
+    Find us next at Caldwell Street Fair 10/2
+    <a class="underline text-xs sm:text-sm" href="https://www.caldwellstreetfair.com/" target="_blank" rel="noreferrer"> Learn More &rarr; </a>
   </p>
 
   <button onClick={closeOut} 
