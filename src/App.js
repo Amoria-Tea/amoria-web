@@ -1,6 +1,5 @@
 import Nav from './Components/Nav';
 import './App.css';
-import Anc from './Components/Anc';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Menu from './Components/MenuComponents/Menu'
@@ -22,7 +21,6 @@ function App() {
 
   return (
     <div>
-      <Anc></Anc>
       <BrowserRouter>
       <Header></Header>
       <Nav></Nav>
