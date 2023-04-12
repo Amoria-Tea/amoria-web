@@ -22,6 +22,11 @@ function Nav(props) {
                 About
               </Link>
             </li>
+            <li className="underlined">
+              <Link to="/contact" class="transition hover:text-black/75">
+               Contact 
+              </Link>
+            </li>
           </ul>
         </div>
         </nav>
