@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Logo from './SiteImg/Amoria-Tea-Cup-Logos-Vertical.svg';
 
 function Footer(props) {
+  const date = new Date();
+  const year = date.getFullYear();
     return (
       <footer class="bg-gray-100">
   <div
@@ -29,6 +31,11 @@ function Footer(props) {
               Menu
             </Link>
           </li>
+           <li>
+            <Link to="/contact" class="text-gray-700 transition hover:text-gray-700/75" href="/">
+              Contact
+            </Link>
+          </li>
 
         </ul>
       </nav>
@@ -39,7 +46,7 @@ function Footer(props) {
       See you soon!
       </div>
       <p class="text-xs sm:text-sm  text-center text-gray-400 lg:text-center">
-       Copyright &copy; 2022
+       Copyright &copy; {year}
       </p>
       <div class="text-xs sm:text-sm text-center text-gray-400 sm:text-right"> mike@amoriatea.com
       </div>
