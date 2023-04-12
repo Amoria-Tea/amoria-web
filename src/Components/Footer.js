@@ -48,8 +48,8 @@ function Footer(props) {
       <p class="text-xs sm:text-sm  text-center text-gray-400 lg:text-center">
        Copyright &copy; {year}
       </p>
-      <div class="text-xs sm:text-sm text-center text-gray-400 sm:text-right"> mike@amoriatea.com
-      </div>
+      <a href="mailto: mike@amoriatea.com" class="text-xs sm:text-sm text-center text-gray-400 sm:text-right"> mike@amoriatea.com
+      </a>
     </div>
     </div>
 </footer>

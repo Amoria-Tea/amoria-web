@@ -14,26 +14,32 @@ function Contact(props) {
 
   
     return (
-        <>
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div class="flex justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 mb-12 max-w-screen-2xl">
             <div>
                 <h1 class="flex justify-center pb-4 font-semibold text-gray-700 text-2xl">
                    Let's Connect! 
                 </h1>
-                <p class="text-center">
-                    Company *Snippet and some important information before calling*
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas aperiam error consectetur totam, magnam debitis sint. Voluptate illum odit temporibus alias possimus eaque tempore iure ratione accusamus! Culpa, cupiditate!
+                <p class="text-center px-20">
+                    Company *Snippet and/or some important information before calling*
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas aperiam error consectetur totam, magnam debiti.
                 </p>
+                <a href="tel:732-515-8724" class="flex justify-center mt-4 font-semibold text-lg md:text-2xl text-gray-700">
+                    732-515-8724
+                </a>
+                <a href="mailto: mike@amoriatea.com" class="flex justify-center mt-4 font-semibold text-lg md:text-2xl text-gray-700">
+                    mike@amoriatea.com
+                </a>
             </div>
-            <div className="flex justify-center">
-            <form className="space-y-4 shadow-md p-4 rounded-lg" onSubmit={onSubmit}>
+            <div class="flex justify-center">
+            <form class="space-y-4 shadow-md p-4 rounded-lg min-w-full" onSubmit={onSubmit}>
           <div>
-            <h1 className="flex justify-center pb-4 font-semibold text-gray-700 text-2xl">
+            <h1 class="flex justify-center pb-4 font-semibold text-gray-700 text-2xl">
                 Contact
             </h1>
-            <label className="sr-only" htmlFor="Name">Name</label>
+            <label class="sr-only" htmlFor="Name">Name</label>
             <input
-              className="w-full rounded-lg shadow-md p-3 text-sm"
+              class="w-full rounded-lg shadow-md p-3 text-sm"
               pattern='^[A-Za-z]+(?:\s[A-Za-z]+)*$'
               placeholder="Name"
               type="text"
@@ -45,11 +51,11 @@ function Contact(props) {
             />
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <label className="sr-only" htmlFor="email">Email</label>
+              <label class="sr-only" htmlFor="email">Email</label>
               <input
-                className="w-full rounded-lg shadow-md  p-3 text-sm"
+                class="w-full rounded-lg shadow-md  p-3 text-sm"
                 placeholder="Email address"
                 type="email"
                 id="email"
@@ -62,9 +68,9 @@ function Contact(props) {
             </div>
 
             <div>
-              <label className="sr-only" htmlFor="phone">Phone</label>
+              <label class="sr-only" htmlFor="phone">Phone</label>
               <input
-                className="w-full rounded-lg shadow-md  border-2 p-3 text-sm"
+                class="w-full rounded-lg shadow-md  border-2 p-3 text-sm"
                 placeholder="Phone Number"
                 type="tel"
                 id="phone"
@@ -78,10 +84,10 @@ function Contact(props) {
           </div>
 
           <div>
-            <label className="sr-only" htmlFor="message">Message</label>
+            <label class="sr-only" htmlFor="message">Message</label>
 
             <textarea
-              className="w-full rounded-lg shadow-md border-2 p-3 text-sm"
+              class="w-full rounded-lg shadow-md border-2 p-3 text-sm"
               placeholder="Message"
               rows="8"
               id="message"
@@ -91,7 +97,7 @@ function Contact(props) {
             ></textarea>
           </div>
 
-          <div className="mt-4">
+          <div class="mt-4">
             <button
               type="submit"
             >
@@ -103,7 +109,7 @@ function Contact(props) {
         </form>
         </div>
         </div>   
-        </>
+        </div>
     );
 }
 
