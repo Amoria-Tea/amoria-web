@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 function Nav(props) {
     return (
 <header>
-  <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+  <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div className="menu">
-      <div class="md:block">
+      <div className="md:block">
         <nav aria-labelledby="header-navigation">
-          <h2 class="sr-only" id="header-navigation">Header navigation</h2>
+          <h2 className="sr-only" id="header-navigation">Header navigation</h2>
         <div className="nav-ul-container">
-          <ul class="flex items-center gap-5 text-2xl">
+          <ul className="flex items-center gap-5 text-2xl">
             <li className="underlined">
-              <Link to="/Menu" class="transition hover:text-black/75">
+              <Link to="/Menu" className="transition hover:text-black/75">
                 Menu
               </Link>
             </li>
 
             <li className="underlined">
-              <Link to="/about" class="transition hover:text-black/75">
+              <Link to="/about" className="transition hover:text-black/75">
                 About
               </Link>
             </li>
             <li className="underlined">
-              <Link to="/contact" class="transition hover:text-black/75">
+              <Link to="/contact" className="transition hover:text-black/75">
                Contact 
               </Link>
             </li>
