@@ -18,12 +18,12 @@ const products = {
   drinks3: [{}, {}],
   drinks4: [{}, {}],
   toppings: [
-    { description: "Hi" },
-    { description: "Bye" },
-    { description: "Cool" },
+    { description: "Toppings are cool" },
+    { description: "Boba" },
+    { description: "Jelly" },
     { description: "Andrew" },
     { description: "is" },
-    { description: "cool" },
+    { description: "cool????" },
   ],
 };
 
