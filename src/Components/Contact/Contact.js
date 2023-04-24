@@ -3,6 +3,11 @@ import emailjs from "@emailjs/browser";
 import "./ContactUs.css";
 
 export const Contact = () => {
+  const [subject, setSubject] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
 
   const sent = () => {
@@ -11,23 +16,53 @@ export const Contact = () => {
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_iyih0jt",
-        "template_9mcw1oi",
-        form.current,
-        "pWK-1B7t6ZNPqH79e"
-      )
-      .then(
-        (result) => {
-          setEmailSent(true);
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_iyih0jt",
+  //       "template_9mcw1oi",
+  //       form.current,
+  //       "pWK-1B7t6ZNPqH79e"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         setEmailSent(true);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+
+    // THIS IS FOR SENDGRID FETCH
+    fetch(
+      "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.log(error.text);
+        body: JSON.stringify({
+          from: email,
+          name: name,
+          subject: subject,
+          phone: phone,
+          message: message
+        }),
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          setEmailSent(true);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
         }
-      );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -59,6 +94,8 @@ export const Contact = () => {
                 type="text"
                 id="subject"
                 name="from_subject"
+                value={subject}
+                onChange={() => setSubject("")}
               />
             </div>
 
@@ -73,6 +110,8 @@ export const Contact = () => {
                 type="text"
                 id="name"
                 name="from_name"
+                value={name}
+                onChange={() => setName("")}
                 required
               />
             </div>
@@ -89,6 +128,8 @@ export const Contact = () => {
                   id="email"
                   pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
                   name="reply_to_email"
+                  value={email}
+                  onChange={() => setEmail("")}
                   required
                 />
               </div>
@@ -104,6 +145,8 @@ export const Contact = () => {
                   id="phone"
                   pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
                   name="reply_to_number"
+                  value={phone}
+                  onChange={() => setPhone("")}
                   required
                 />
               </div>
@@ -120,6 +163,8 @@ export const Contact = () => {
                 rows="8"
                 id="message"
                 name="message"
+                value={message}
+                onChange={() => setMessage("")}
               ></textarea>
             </div>
 
