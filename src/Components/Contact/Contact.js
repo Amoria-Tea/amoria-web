@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import bobas from '../SiteImg/bobaarmy.png'
 import "./ContactUs.css";
 
 export const Contact = () => {
@@ -67,16 +68,23 @@ export const Contact = () => {
 
   return (
     <div class="flex justify-center">
-      <div class="grid grid-cols-1 md:grid-cols-2 mb-12 max-w-screen-2xl">
-        <div>
-          <h1 class="flex justify-center pb-4 font-semibold text-gray-700 text-2xl">
-            Let's Connect!
+      <div class="grid grid-cols-1 mb-12 max-w-screen-2xl">
+        <div class="xl:h-96 lg:h-80 md:h-72">
+        <div class="grid grid-cols-2 h-52">
+          <div class="mt-12" id="background_bulkorder">
+          <h1 class="md:mt-20 lg:mt-30 flex justify-center sm:p-2 md:p-3 font-semibold text-gray-900 text-lg md:text-4xl fade-in">
+            Bulk Order 
           </h1>
-          <p class="text-center px-20">
-            Company *Snippet Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Repudiandae quas aperiam error consectetur totam, magnam
-            debiti.
+          <p class="text-center mb-2 md:mb-10 text-sm md:text-xl fade-in">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda ipsam quia nulla, neque velit deleniti unde, nesciunt asperiores repudiandae porro perferendis odio quisquam! 
           </p>
+          </div>
+          <div class="flex justify-center items-center" id="background_bobaarmy">
+            <picture>
+              <img src={bobas} alt="bobas" className="fadeInTop"/>
+            </picture>
+          </div>
+        </div>
         </div>
         <div class="flex justify-center">
           <form
@@ -94,8 +102,6 @@ export const Contact = () => {
                 type="text"
                 id="subject"
                 name="from_subject"
-                value={subject}
-                onChange={() => setSubject("")}
               />
             </div>
 
@@ -106,7 +112,7 @@ export const Contact = () => {
               <input
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
                 pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
-                placeholder="Name"
+                placeholder="Name*"
                 type="text"
                 id="name"
                 name="from_name"
@@ -116,14 +122,13 @@ export const Contact = () => {
               />
             </div>
 
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label class="sr-only" for="email">
                   Email
                 </label>
                 <input
                   class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Email address"
+                  placeholder="Email address*"
                   type="email"
                   id="email"
                   pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
@@ -140,7 +145,7 @@ export const Contact = () => {
                 </label>
                 <input
                   class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Phone Number"
+                  placeholder="Phone Number*"
                   type="tel"
                   id="phone"
                   pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
@@ -150,6 +155,32 @@ export const Contact = () => {
                   required
                 />
               </div>
+
+            <div>
+                <label class="sr-only" for="phone">
+                  Phone
+                </label>
+                <input
+                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                  placeholder="Location*"
+                  type="text"
+                  id="location"
+                  pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
+                  required
+                />
+              </div>
+
+            <div>
+              <label class="sr-only" for="Subject">
+                Subject 
+              </label>
+              <input
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                placeholder="Subject / Type of event*"
+                type="text"
+                id="subject"
+                name="from_subject"
+              />
             </div>
 
             <div>
@@ -159,7 +190,21 @@ export const Contact = () => {
 
               <textarea
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100 resize-none"
-                placeholder="Message"
+                placeholder="Please indicate desired event date, time, and location.*"
+                rows="8"
+                id="message"
+                name="message"
+              ></textarea>
+            </div>
+
+             <div>
+              <label class="sr-only" for="message">
+                Message
+              </label>
+
+              <textarea
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100 resize-none"
+                placeholder="Questions and specific request."
                 rows="8"
                 id="message"
                 name="message"
@@ -171,7 +216,7 @@ export const Contact = () => {
             <div class="mt-4 p-2 flex justify-end">
               <button type="submit" className="rounded-md p-2">
                 <span onSubmit={sent} className="ContactConfirm">
-                  {emailSent ? "Message Sent" : "Send"}
+                  {emailSent ? "Sent" : "Submit"}
                 </span>
               </button>
             </div>

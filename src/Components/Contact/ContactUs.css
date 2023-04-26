@@ -9,3 +9,17 @@
     width: 100%;
     border-radius: 0.5rem;
 }
+
+#background_bulkorder {
+    background-image: url("../SiteImg/background_bulkorder.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+}
+
+#background_bobaarmy {
+    background-image: url("../SiteImg/background_bobaarmy.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}

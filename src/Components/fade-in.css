@@ -8,6 +8,47 @@
   }
 }
 
+@keyframes fadeInOutAnimationTop {
+  0% {
+    transform: translate3d(0, -50px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: 0.25s all ease-in-out;
+  }
+}
+
+@keyframes fadeInOutAnimationLeft {
+  0% {
+    transform: translate3d(-50px, 0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: 0.25s all ease-in-out;
+  }
+}
+
 .fade-in {
-  animation: fade-in 1s;
+  animation: fade-in 1.5s;
+}
+
+.fadeInLeft {
+  transition: 0.25s all ease-in-out;
+  animation: fadeInOutAnimationLeft 1s;
+}
+
+.fadeInRight {
+  transition: 0.25s all ease-in-out;
+  animation: fadeInOutAnimationRight 1s;
+}
+
+.fadeInTop {
+  transition: 0.25s all ease-in-out;
+  animation: fadeInOutAnimationTop 1s;
 }

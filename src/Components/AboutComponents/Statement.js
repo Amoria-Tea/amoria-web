@@ -1,5 +1,7 @@
 import React from 'react';
 import 'Components/fade-in.css';
+import sellingBoba from '../SiteImg/festivalPicture.jpg'
+import mikeSellingBoba from '../SiteImg/sellingTea.jpg'
 function Statement(props) {
 // ToDo
 // For this component make it responsive: Use below link for reference 
@@ -17,8 +19,9 @@ function Statement(props) {
                         an up and coming environmentally conscious and experience oriented bubble tea shop here in NJ. 
                         </p>
                 </div>
-                <div className="man-making-tea-container">
-                    <img className='tea-making-man' src={"https://i.imgur.com/p8d4neA.jpeg"} alt="man making tea"/>
+                <div class="sm:flex w-full" id="tea-making-man">
+                    <img className='tea-making-man' id="manSellingTea" src={sellingBoba} alt="man finishing tea"/>
+                    <img className='tea-making-man2' id="manSellingTea" src={mikeSellingBoba} alt="man selling tea" />
                 </div>
             </div>
         </div>

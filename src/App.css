@@ -61,10 +61,10 @@ strong {
   font-weight: 700;
 }
 
-.man-making-tea-container {
+/* .man-making-tea-container {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 .man-making-tea-img {
   display: block;
@@ -251,8 +251,66 @@ strong {
     border-bottom: 0px;
   }
 
+  /* About */
+
   .tea-making-man {
     border-top-left-radius: 100px;
+    transform: translate3d(0, 0, 0);
+    transition: 0.25s all ease-in-out;
+    animation: fadeInOutAnimationLeft 1s;
+  }
+
+  .tea-making-man2 {
+    border-top-left-radius: 0px;
+    transform: translate3d(0, 0, 0);
+    animation: fadeInOutAnimationTop 1s;
+  }
+
+  #tea-making-man {
+    border-top-left-radius: 100px;
+    background-color: #f3e0c2;
+
+  }
+
+  /* About Animation */
+
+  @keyframes fadeInOutAnimationRight {
+    0% {
+      transform: translate3d(50px, 0, 0);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: 0.25s all ease-in-out;
+    }
+  }
+
+  @keyframes fadeInOutAnimationTop {
+    0% {
+      transform: translate3d(0, -50px, 0);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: 0.25s all ease-in-out;
+    }
+  }
+
+  @keyframes fadeInOutAnimationLeft {
+    0% {
+      transform: translate3d(-50px, 0, 0);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: 0.25s all ease-in-out;
+    }
   }
 
   .man-making-tea-container {
@@ -431,4 +489,10 @@ strong {
     background-size: cover;
     height: 1000px;
   }
+}
+
+/* About Page */
+
+#manSellingTea {
+  height: 675px;
 }

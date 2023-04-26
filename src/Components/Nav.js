@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Nav(props) {
-    return (
+
+  const [underline, SetUnderLine] = useState(false);
+
+  const onThisNavComponent = () => {
+    SetUnderLine(!underline);  
+    console.log(SetUnderLine(!underline))
+  }
+
+return (
 <header>
   <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div className="menu">
@@ -11,18 +19,18 @@ function Nav(props) {
           <h2 className="sr-only" id="header-navigation">Header navigation</h2>
         <div className="nav-ul-container">
           <ul className="flex items-center gap-5 text-2xl">
-            <li className="underlined">
-              <Link to="/Menu" className="transition hover:text-black/75">
+            <li className="">
+              <Link onClick={onThisNavComponent} to="/Menu" className="transition hover:text-black/75">
                 Menu
               </Link>
             </li>
 
-            <li className="underlined">
+            <li className="">
               <Link to="/about" className="transition hover:text-black/75">
                 About
               </Link>
             </li>
-            <li className="underlined">
+            <li className="">
               <Link to="/contact" className="transition hover:text-black/75">
                Contact 
               </Link>
