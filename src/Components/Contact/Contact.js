@@ -16,23 +16,23 @@ export const Contact = () => {
 
   const form = useRef();
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   emailjs
-  //     .sendForm(
-  //       "service_iyih0jt",
-  //       "template_9mcw1oi",
-  //       form.current,
-  //       "pWK-1B7t6ZNPqH79e"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         setEmailSent(true);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
+  const sendEmail = (e) => {
+    //   e.preventDefault();
+    //   emailjs
+    //     .sendForm(
+    //       "service_iyih0jt",
+    //       "template_9mcw1oi",
+    //       form.current,
+    //       "pWK-1B7t6ZNPqH79e"
+    //     )
+    //     .then(
+    //       (result) => {
+    //         setEmailSent(true);
+    //       },
+    //       (error) => {
+    //         console.log(error.text);
+    //       }
+    //     );
 
     // THIS IS FOR SENDGRID FETCH
     fetch(
@@ -47,7 +47,7 @@ export const Contact = () => {
           name: name,
           subject: subject,
           phone: phone,
-          message: message
+          message: message,
         }),
       }
     )
