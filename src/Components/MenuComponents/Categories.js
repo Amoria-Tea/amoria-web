@@ -2,7 +2,7 @@ import CategoryBox from "./CategoryBox";
 
 function Categories({ products, setPage, setCurrProducts, setCurrName }) {
   return (
-    <ul class="grid grid-cols-1 gap-24 md:grid-cols-2 p-10">
+    <ul class="grid grid-cols-1 md:gap-24 gap-14 md:grid-cols-2 p-10">
       {products.map((category) => {
         return (
           <CategoryBox

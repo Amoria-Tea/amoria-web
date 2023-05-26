@@ -9,20 +9,34 @@ function Menu() {
   const [currProducts, setCurrProducts] = useState([]);
 
   return (
-    <div className="border-t border-[#3E3E3E] py-10">
-      <ul className="flex justify-evenly">
-        <li className={`${page === 1 ? "font-bold" : ""}`}>
-          <button onClick={() => setPage(1)}>Categories</button>
+    <div className="border-t border-[#3E3E3E] py-10 my-10">
+      <ul className="flex justify-evenly md:text-lg text-xs">
+        <li>
+          <button
+            onClick={() => setPage(1)}
+            className={`${
+              page === 1 ? "before:visible invisible" : "before:invisible"
+            } before:content-['Categories'] before:absolute before:font-bold`}
+          >
+            Categories
+          </button>
         </li>
         {products.map((category) => {
           return (
-            <li
-              key={category.name}
-              className={`${
-                currName === category.name && page === 2 ? "font-bold" : ""
-              }`}
-            >
+            <li key={category.name}>
               <button
+                className={`${
+                  currName === category.name && page === 2
+                    ? "visible"
+                    : "invisible"
+                } absolute font-bold`}
+              >
+                {category.name}
+              </button>
+              <button
+                className={`${
+                  currName === category.name && page === 2 ? "invisible" : ""
+                }`}
                 onClick={() => {
                   setPage(2);
                   setCurrProducts(category.items);
