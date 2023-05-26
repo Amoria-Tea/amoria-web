@@ -1,9 +1,6 @@
-import { ProductsContext } from "context/ProductsProvider";
-import React, { useContext } from "react";
+import React from "react";
 
-const CategoryBox = ({ category, setPage }) => {
-  const { setCurrProducts } = useContext(ProductsContext);
-
+const CategoryBox = ({ category, setPage, setCurrProducts, setCurrName }) => {
   return (
     <li className="bg-[#F8E8D4] rounded-md h-60 w-96 justify-self-center">
       <button
@@ -11,6 +8,7 @@ const CategoryBox = ({ category, setPage }) => {
         onClick={() => {
           setPage(2);
           setCurrProducts(category.items);
+          setCurrName(category.name);
         }}
       >
         <img

@@ -8,8 +8,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DecorationBanner from "./Components/HomePage/DecorationBanner";
 import Intro from "./Components/HomePage/Intro";
 import Contact from "Components/Contact/Contact";
-import DynamicMenu from "Components/MenuComponents/DynamicMenu";
-import { ProductsProvider } from "context/ProductsProvider";
 
 function App() {
   //ToDo: Ctrl Shift F
@@ -37,14 +35,7 @@ function App() {
                 </>
               }
             ></Route>
-            <Route
-              path="/Menu"
-              element={
-                <ProductsProvider>
-                  <Menu />
-                </ProductsProvider>
-              }
-            ></Route>
+            <Route path="/Menu" element={<Menu />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
