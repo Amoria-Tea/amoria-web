@@ -10,13 +10,11 @@ function Menu() {
 
   return (
     <div className="border-t border-[#3E3E3E] py-10 my-10">
-      <ul className="flex justify-evenly md:text-lg text-xs">
+      <ul className="grid grid-cols-5 text-center md:text-lg text-xs px-2">
         <li>
           <button
             onClick={() => setPage(1)}
-            className={`${
-              page === 1 ? "before:visible invisible" : "before:invisible"
-            } before:content-['Categories'] before:absolute before:font-bold`}
+            className={`${page === 1 ? "font-bold" : ""}`}
           >
             Categories
           </button>
@@ -25,23 +23,14 @@ function Menu() {
           return (
             <li key={category.name}>
               <button
-                className={`${
-                  currName === category.name && page === 2
-                    ? "visible"
-                    : "invisible"
-                } absolute font-bold`}
-              >
-                {category.name}
-              </button>
-              <button
-                className={`${
-                  currName === category.name && page === 2 ? "invisible" : ""
-                }`}
                 onClick={() => {
                   setPage(2);
                   setCurrProducts(category.items);
                   setCurrName(category.name);
                 }}
+                className={
+                  currName === category.name && page === 2 ? "font-bold" : ""
+                }
               >
                 {category.name}
               </button>
