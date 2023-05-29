@@ -9,3 +9,34 @@
     width: 100%;
     border-radius: 0.5rem;
 }
+
+.threebobas {
+    width: 675px;
+}
+
+.backgroundbubbleanimation {
+    animation: bobacolorchange 1.25s ease-in-out infinite alternate;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#background_bulkorder {
+    background-image: url("../SiteImg/Rectangle\ 31.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: calc(100%);
+    padding: 25px;
+}
+
+@keyframes bobacolorchange {
+
+    from {
+        background-image: url('../SiteImg/BOBA\ animation.png');
+    }
+
+    to {
+        background-image: url('../SiteImg/BOBA\ animation\ \(1\).png');
+
+    }
+}

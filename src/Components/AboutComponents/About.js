@@ -3,6 +3,8 @@ import MileStones from './MileStones';
 import Statement from './Statement';
 import ProductInfo from './ProductInfo'
 
+//scroll into view then fade in 
+
 function About(props) {
     return (
         <div>
