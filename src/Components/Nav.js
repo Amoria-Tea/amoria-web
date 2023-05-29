@@ -20,7 +20,7 @@ return (
         <div className="nav-ul-container">
           <ul className="flex items-center gap-5 text-2xl">
             <li className="">
-              <Link onClick={onThisNavComponent} to="/Menu" className="transition hover:text-black/75">
+              <Link onClick={onThisNavComponent} to="/Menu" className="transition hover:text-black/75 active:font-extrabold">
                 Menu
               </Link>
             </li>

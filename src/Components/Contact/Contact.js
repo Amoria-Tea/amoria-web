@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import bobas from '../SiteImg/bobaarmy.png'
+import bobas from '../SiteImg/bulk order bbt.png'
 import "./ContactUs.css";
+//api 
 
 export const Contact = () => {
   const [subject, setSubject] = useState("");
@@ -15,6 +16,7 @@ export const Contact = () => {
     setEmailSent(!emailSent);
   };
 
+  //fetch
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -68,43 +70,25 @@ export const Contact = () => {
 
   return (
     <div class="flex justify-center">
-      <div class="grid grid-cols-1 mb-12 max-w-screen-2xl">
-        <div class="xl:h-96 lg:h-80 md:h-72">
-        <div class="grid grid-cols-2 h-52">
-          <div class="mt-12" id="background_bulkorder">
-          <h1 class="md:mt-20 lg:mt-30 flex justify-center sm:p-2 md:p-3 font-semibold text-gray-900 text-lg md:text-4xl fade-in">
-            Bulk Order 
-          </h1>
-          <p class="text-center mb-2 md:mb-10 text-sm md:text-xl fade-in">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda ipsam quia nulla, neque velit deleniti unde, nesciunt asperiores repudiandae porro perferendis odio quisquam! 
+      <div class="max-w-screen-2xl">
+        <div id="background_bulkorder">
+            <div class="backgroundbubbleanimation flex justify-center">
+            <h1 class="mt-24 text-4xl sm:mt-48 absolute sm:text-6xl font-serif text-gray-700"> Bulk Order </h1>
+            <img src={bobas} class="threebobas mt-50 sm:mt-80" alt="three bobas"/>
+            </div>
+        </div>
+         <p class="text-center px-20 font-normal sm:text-2xl avenir text-gray-500">
+            For more information on catering, fill out this form and we'll be in touch soon!
           </p>
-          </div>
-          <div class="flex justify-center items-center" id="background_bobaarmy">
-            <picture>
-              <img src={bobas} alt="bobas" className="fadeInTop"/>
-            </picture>
-          </div>
-        </div>
-        </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-4 px-4">
           <form
-            class="space-y-4 shadow-md p-4 rounded-lg min-w-full"
+            class="space-y-4 shadow-lg p-2 m-8 sm:p-4 rounded-lg min-w-2xl"
             onSubmit={sendEmail}
             ref={form}
           >
-            <div>
-              <label class="sr-only" for="Subject">
-                Subject
-              </label>
-              <input
-                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                placeholder="Subject"
-                type="text"
-                id="subject"
-                name="from_subject"
-              />
-            </div>
-
+          <p class="text-center px-20 sm:py-10 md:py-20 font-semibold text-xl sm:text-2xl">
+            For more information on catering, fill out this form and we’ll be in touch soon!
+          </p>
             <div>
               <label class="sr-only" for="Name">
                 Name
@@ -156,16 +140,58 @@ export const Contact = () => {
                 />
               </div>
 
-            <div>
+              <div class="flex justify-between">
+                  <div>
                 <label class="sr-only" for="phone">
-                  Phone
+                  Location
+                </label>
+                <input
+                  class="w-full sm:w-96 rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                  placeholder="City*"
+                  type="text"
+                  id="location"
+                  autocomplete="address-level2"
+                  required
+                />
+              </div>
+                <div>
+                <label class="sr-only" for="phone">
+                  Location
                 </label>
                 <input
                   class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Location*"
+                  placeholder="Zip-Code*"
                   type="text"
                   id="location"
-                  pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
+                  autocomplete="postal-code"
+                  required
+                />
+              </div>
+               <div>
+                <label class="sr-only" for="phone">
+                  Location
+                </label>
+                <input
+                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                  placeholder="State*"
+                  type="text"
+                  id="location"
+                  autocomplete="address-level1"
+                  required
+                />
+              </div>
+              </div>
+
+            <div>
+                <label class="sr-only" for="phone">
+                  Location
+                </label>
+                <input
+                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                  placeholder="Address*"
+                  type="text"
+                  id="location"
+                  autocomplete="address"
                   required
                 />
               </div>
