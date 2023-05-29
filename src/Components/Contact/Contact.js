@@ -137,8 +137,13 @@ export const Contact = () => {
                   id="phone"
                   pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
                   name="reply_to_number"
+<<<<<<< HEAD
                   value={phone}
                   required
+=======
+                  required
+                  value={phone}
+>>>>>>> cc4477e (mvp for contact form)
                 onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
