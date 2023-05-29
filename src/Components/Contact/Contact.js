@@ -80,10 +80,10 @@ export const Contact = () => {
         <div id="background_bulkorder">
             <div class="backgroundbubbleanimation flex justify-center">
             <h1 class="text-center absolute text-2xl sm:text-4xl font-semibold poppin_contact sm:top-80 text-gray-600"> INTERESTED IN HAVING <br/> AMORIA AT YOUR EVENT? </h1>
-            <img src={bobas} class="threebobas relative top-32 sm:top-52" alt="three bobas"/>
+            <img src={bobas} class="threebobas relative top-24 sm:top-52" alt="three bobas"/>
             </div>
         </div>
-         <p class="mt-32 sm:mt-52 text-center px-20 font-normal sm:text-2xl text-gray-500 poppin_contact">
+         <p class="mt-24 sm:mt-52 text-center px-20 font-normal sm:text-2xl text-gray-500 poppin_contact">
             We offer on-site catering and large delivery! For more information on catering, fill out this form and we’ll be in touch soon!
           </p>
         <div class="grid mt-4 px-4">
