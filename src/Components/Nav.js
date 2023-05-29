@@ -31,6 +31,11 @@ return (
               </Link>
             </li>
             <li className="">
+              <Link to="/visitus" className="transition hover:text-black/75">
+                Visit Us
+              </Link>
+            </li>
+            <li className="">
               <Link to="/contact" className="transition hover:text-black/75">
                Contact 
               </Link>
