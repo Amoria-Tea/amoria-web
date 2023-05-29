@@ -29,6 +29,11 @@
     padding: 25px;
 }
 
+.poppin_contact {
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
 @keyframes bobacolorchange {
 
     from {
@@ -38,5 +43,19 @@
     to {
         background-image: url('../SiteImg/BOBA\ animation\ \(1\).png');
 
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    @keyframes bobacolorchange {
+
+        from {
+            background-image: url('../SiteImg/1boba_anime.png');
+        }
+
+        to {
+            background-image: url('../SiteImg/boba_anime_after.png');
+
+        }
     }
 }
