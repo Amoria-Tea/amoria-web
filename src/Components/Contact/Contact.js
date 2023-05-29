@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import bobas from '../SiteImg/bulk order bbt.png'
 import "./ContactUs.css";
+//api 
 
 export const Contact = () => {
   const [subject, setSubject] = useState("");
@@ -8,16 +10,19 @@ export const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [location, setLocation] = useState("");
+  const [messageOptional, setMessageOptional] = useState("");
   const [emailSent, setEmailSent] = useState(false);
 
   const sent = () => {
     setEmailSent(!emailSent);
   };
 
+  //fetch
   const form = useRef();
 
   const sendEmail = (e) => {
-    //   e.preventDefault();
+      e.preventDefault();
     //   emailjs
     //     .sendForm(
     //       "service_iyih0jt",
@@ -48,6 +53,8 @@ export const Contact = () => {
           subject: subject,
           phone: phone,
           message: message,
+          location: location,
+          messageOptional: messageOptional
         }),
       }
     )
@@ -58,6 +65,8 @@ export const Contact = () => {
           setEmail("");
           setPhone("");
           setMessage("");
+          setLocation("");
+          setMessageOptional("");
         }
       })
       .catch((error) => {
@@ -67,38 +76,22 @@ export const Contact = () => {
 
   return (
     <div class="flex justify-center">
-      <div class="grid grid-cols-1 md:grid-cols-2 mb-12 max-w-screen-2xl">
-        <div>
-          <h1 class="flex justify-center pb-4 font-semibold text-gray-700 text-2xl">
-            Let's Connect!
-          </h1>
-          <p class="text-center px-20">
-            Company *Snippet Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Repudiandae quas aperiam error consectetur totam, magnam
-            debiti.
-          </p>
+      <div class="max-w-screen-2xl">
+        <div id="background_bulkorder">
+            <div class="backgroundbubbleanimation flex justify-center">
+            <h1 class="mt-24 text-4xl sm:mt-48 absolute sm:text-6xl font-serif text-gray-700"> Bulk Order </h1>
+            <img src={bobas} class="threebobas mt-50 sm:mt-80" alt="three bobas"/>
+            </div>
         </div>
-        <div class="flex justify-center">
+         <p class="text-center px-20 font-normal sm:text-2xl avenir text-gray-500">
+            For more information on catering, fill out this form and we'll be in touch soon!
+          </p>
+        <div class="grid mt-4 px-4">
           <form
-            class="space-y-4 shadow-md p-4 rounded-lg min-w-full"
+            class="space-y-4 shadow-lg p-2 m-8 sm:p-4 rounded-lg min-w-2xl"
             onSubmit={sendEmail}
             ref={form}
           >
-            <div>
-              <label class="sr-only" for="Subject">
-                Subject
-              </label>
-              <input
-                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                placeholder="Subject"
-                type="text"
-                id="subject"
-                name="from_subject"
-                value={subject}
-                onChange={() => setSubject("")}
-              />
-            </div>
-
             <div>
               <label class="sr-only" for="Name">
                 Name
@@ -106,31 +99,30 @@ export const Contact = () => {
               <input
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
                 pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
-                placeholder="Name"
+                placeholder="Name*"
                 type="text"
                 id="name"
                 name="from_name"
-                value={name}
-                onChange={() => setName("")}
                 required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label class="sr-only" for="email">
                   Email
                 </label>
                 <input
                   class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Email address"
+                  placeholder="Email address*"
                   type="email"
                   id="email"
                   pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
                   name="reply_to_email"
-                  value={email}
-                  onChange={() => setEmail("")}
                   required
+                  value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -140,16 +132,45 @@ export const Contact = () => {
                 </label>
                 <input
                   class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Phone Number"
+                  placeholder="Phone Number*"
                   type="tel"
                   id="phone"
                   pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
                   name="reply_to_number"
                   value={phone}
-                  onChange={() => setPhone("")}
                   required
+                onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
+
+            <div>
+                <label class="sr-only" for="phone">
+                  Location
+                </label>
+                <input
+                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                  placeholder="Location*"
+                  type="text"
+                  id="location"
+                  required
+                  value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                />
+              </div>
+
+            <div>
+              <label class="sr-only" for="Subject">
+                Subject 
+              </label>
+              <input
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                placeholder="Subject / Type of event*"
+                type="text"
+                id="subject"
+                name="from_subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
             </div>
 
             <div>
@@ -159,19 +180,35 @@ export const Contact = () => {
 
               <textarea
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100 resize-none"
-                placeholder="Message"
+                placeholder="Please indicate desired event date, time, and location.*"
                 rows="8"
                 id="message"
                 name="message"
                 value={message}
-                onChange={() => setMessage("")}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
+
+             <div>
+              <label class="sr-only" for="message">
+                Message
+              </label>
+
+              <textarea
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100 resize-none"
+                placeholder="Questions and specific request."
+                rows="8"
+                id="message"
+                name="message"
+                value={messageOptional}
+                onChange={(e) => setMessageOptional(e.target.value)}
               ></textarea>
             </div>
 
             <div class="mt-4 p-2 flex justify-end">
               <button type="submit" className="rounded-md p-2">
                 <span onSubmit={sent} className="ContactConfirm">
-                  {emailSent ? "Message Sent" : "Send"}
+                  {emailSent ? "Sent" : "Submit"}
                 </span>
               </button>
             </div>
