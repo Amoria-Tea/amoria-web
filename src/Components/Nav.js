@@ -18,7 +18,7 @@ return (
         <nav aria-labelledby="header-navigation">
           <h2 className="sr-only" id="header-navigation">Header navigation</h2>
         <div className="nav-ul-container">
-          <ul className="flex items-center gap-5 text-2xl">
+          <ul className="flex items-center gap-7 text-xl sm:text-2xl">
             <li className="">
               <Link onClick={onThisNavComponent} to="/Menu" className="transition hover:text-black/75 active:font-extrabold">
                 Menu
