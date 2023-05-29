@@ -10,6 +10,8 @@ export const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [location, setLocation] = useState("");
+  const [messageOptional, setMessageOptional] = useState("");
   const [emailSent, setEmailSent] = useState(false);
 
   const sent = () => {
@@ -20,7 +22,7 @@ export const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    //   e.preventDefault();
+      e.preventDefault();
     //   emailjs
     //     .sendForm(
     //       "service_iyih0jt",
@@ -51,6 +53,8 @@ export const Contact = () => {
           subject: subject,
           phone: phone,
           message: message,
+          location: location,
+          messageOptional: messageOptional
         }),
       }
     )
@@ -61,6 +65,8 @@ export const Contact = () => {
           setEmail("");
           setPhone("");
           setMessage("");
+          setLocation("");
+          setMessageOptional("");
         }
       })
       .catch((error) => {
@@ -80,15 +86,12 @@ export const Contact = () => {
          <p class="text-center px-20 font-normal sm:text-2xl avenir text-gray-500">
             For more information on catering, fill out this form and we'll be in touch soon!
           </p>
-        <div class="flex justify-center mt-4 px-4">
+        <div class="grid mt-4 px-4">
           <form
             class="space-y-4 shadow-lg p-2 m-8 sm:p-4 rounded-lg min-w-2xl"
             onSubmit={sendEmail}
             ref={form}
           >
-          <p class="text-center px-20 sm:py-10 md:py-20 font-semibold text-xl sm:text-2xl">
-            For more information on catering, fill out this form and we’ll be in touch soon!
-          </p>
             <div>
               <label class="sr-only" for="Name">
                 Name
@@ -100,9 +103,9 @@ export const Contact = () => {
                 type="text"
                 id="name"
                 name="from_name"
-                value={name}
-                onChange={() => setName("")}
                 required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
@@ -117,9 +120,9 @@ export const Contact = () => {
                   id="email"
                   pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
                   name="reply_to_email"
-                  value={email}
-                  onChange={() => setEmail("")}
                   required
+                  value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -135,51 +138,9 @@ export const Contact = () => {
                   pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
                   name="reply_to_number"
                   value={phone}
-                  onChange={() => setPhone("")}
                   required
+                onChange={(e) => setPhone(e.target.value)}
                 />
-              </div>
-
-              <div class="flex justify-between">
-                  <div>
-                <label class="sr-only" for="phone">
-                  Location
-                </label>
-                <input
-                  class="w-full sm:w-96 rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="City*"
-                  type="text"
-                  id="location"
-                  autocomplete="address-level2"
-                  required
-                />
-              </div>
-                <div>
-                <label class="sr-only" for="phone">
-                  Location
-                </label>
-                <input
-                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Zip-Code*"
-                  type="text"
-                  id="location"
-                  autocomplete="postal-code"
-                  required
-                />
-              </div>
-               <div>
-                <label class="sr-only" for="phone">
-                  Location
-                </label>
-                <input
-                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="State*"
-                  type="text"
-                  id="location"
-                  autocomplete="address-level1"
-                  required
-                />
-              </div>
               </div>
 
             <div>
@@ -188,11 +149,12 @@ export const Contact = () => {
                 </label>
                 <input
                   class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Address*"
+                  placeholder="Location*"
                   type="text"
                   id="location"
-                  autocomplete="address"
                   required
+                  value={location}
+                onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
 
@@ -206,6 +168,8 @@ export const Contact = () => {
                 type="text"
                 id="subject"
                 name="from_subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
               />
             </div>
 
@@ -220,6 +184,8 @@ export const Contact = () => {
                 rows="8"
                 id="message"
                 name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
 
@@ -234,8 +200,8 @@ export const Contact = () => {
                 rows="8"
                 id="message"
                 name="message"
-                value={message}
-                onChange={() => setMessage("")}
+                value={messageOptional}
+                onChange={(e) => setMessageOptional(e.target.value)}
               ></textarea>
             </div>
 
