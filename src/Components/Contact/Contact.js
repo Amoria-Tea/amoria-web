@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import bobas from '../SiteImg/bulk order bbt.png'
+import bobas from "../SiteImg/bulk order bbt.png";
 import "./ContactUs.css";
-//api 
+import ContactConfirmation from "./ContactConfirmation";
+import { AnimatePresence } from "framer-motion";
+//api
 
 export const Contact = () => {
   const [subject, setSubject] = useState("");
@@ -13,6 +15,7 @@ export const Contact = () => {
   const [location, setLocation] = useState("");
   const [messageOptional, setMessageOptional] = useState("");
   const [emailSent, setEmailSent] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const sent = () => {
     setEmailSent(!emailSent);
@@ -22,7 +25,7 @@ export const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-      e.preventDefault();
+    e.preventDefault();
     //   emailjs
     //     .sendForm(
     //       "service_iyih0jt",
@@ -40,52 +43,62 @@ export const Contact = () => {
     //     );
 
     // THIS IS FOR SENDGRID FETCH
-    fetch(
-      "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: email,
-          name: name,
-          subject: subject,
-          phone: phone,
-          message: message,
-          location: location,
-          messageOptional: messageOptional
-        }),
-      }
-    )
-      .then((response) => {
-        if (response.ok) {
-          setEmailSent(true);
-          setName("");
-          setEmail("");
-          setPhone("");
-          setMessage("");
-          setLocation("");
-          setMessageOptional("");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // fetch(
+    //   "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       from: email,
+    //       name: name,
+    //       subject: subject,
+    //       phone: phone,
+    //       message: message,
+    //       location: location,
+    //       messageOptional: messageOptional,
+    //     }),
+    //   }
+    // )
+    //   .then((response) => {
+    //     if (response.ok) {
+    //       setShowModal(true);
+    //       setEmailSent(true);
+    //       setName("");
+    //       setEmail("");
+    //       setPhone("");
+    //       setMessage("");
+    //       setLocation("");
+    //       setMessageOptional("");
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    setShowModal(true);
   };
 
   return (
     <div class="flex justify-center">
       <div class="max-w-screen-2xl">
         <div id="background_bulkorder">
-            <div class="backgroundbubbleanimation flex justify-center">
-            <h1 class="text-center absolute text-2xl sm:text-4xl font-semibold poppin_contact sm:top-80 text-gray-600"> INTERESTED IN HAVING <br/> AMORIA AT YOUR EVENT? </h1>
-            <img src={bobas} class="threebobas relative top-24 sm:top-52" alt="three bobas"/>
-            </div>
+          <div class="backgroundbubbleanimation flex justify-center">
+            <h1 class="text-center absolute text-2xl sm:text-4xl font-semibold poppin_contact sm:top-80 text-gray-600">
+              {" "}
+              INTERESTED IN HAVING <br /> AMORIA AT YOUR EVENT?{" "}
+            </h1>
+            <img
+              src={bobas}
+              class="threebobas relative top-24 sm:top-52"
+              alt="three bobas"
+            />
+          </div>
         </div>
-         <p class="mt-24 sm:mt-52 text-center px-20 font-normal sm:text-2xl text-gray-500 poppin_contact">
-            We offer on-site catering and large delivery! For more information on catering, fill out this form and we’ll be in touch soon!
-          </p>
+        <p class="mt-24 sm:mt-52 text-center px-20 font-normal sm:text-2xl text-gray-500 poppin_contact">
+          We offer on-site catering and large delivery! For more information on
+          catering, fill out this form and we’ll be in touch soon!
+        </p>
         <div class="grid mt-4 px-4">
           <form
             class="space-y-4 shadow-lg p-2 m-8 sm:p-4 rounded-lg min-w-2xl"
@@ -103,64 +116,64 @@ export const Contact = () => {
                 type="text"
                 id="name"
                 name="from_name"
-                required
+                // required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
 
-              <div>
-                <label class="sr-only" for="email">
-                  Email
-                </label>
-                <input
-                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Email address*"
-                  type="email"
-                  id="email"
-                  pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
-                  name="reply_to_email"
-                  required
-                  value={email}
+            <div>
+              <label class="sr-only" for="email">
+                Email
+              </label>
+              <input
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                placeholder="Email address*"
+                type="email"
+                id="email"
+                pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
+                name="reply_to_email"
+                // required
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label class="sr-only" for="phone">
-                  Phone
-                </label>
-                <input
-                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Phone Number*"
-                  type="tel"
-                  id="phone"
-                  pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
-                  name="reply_to_number"
-                  value={phone}
-                  required
-                onChange={(e) => setPhone(e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
             <div>
-                <label class="sr-only" for="phone">
-                  Location
-                </label>
-                <input
-                  class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
-                  placeholder="Location*"
-                  type="text"
-                  id="location"
-                  required
-                  value={location}
+              <label class="sr-only" for="phone">
+                Phone
+              </label>
+              <input
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                placeholder="Phone Number*"
+                type="tel"
+                id="phone"
+                pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
+                name="reply_to_number"
+                value={phone}
+                // required
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label class="sr-only" for="phone">
+                Location
+              </label>
+              <input
+                class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
+                placeholder="Location*"
+                type="text"
+                id="location"
+                // required
+                value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
             <div>
               <label class="sr-only" for="Subject">
-                Subject 
+                Subject
               </label>
               <input
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
@@ -189,7 +202,7 @@ export const Contact = () => {
               ></textarea>
             </div>
 
-             <div>
+            <div>
               <label class="sr-only" for="message">
                 Message
               </label>
@@ -213,6 +226,9 @@ export const Contact = () => {
               </button>
             </div>
           </form>
+          <AnimatePresence>
+            {showModal && <ContactConfirmation setShowModal={setShowModal} />}
+          </AnimatePresence>
         </div>
       </div>
     </div>
