@@ -26,56 +26,55 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    //   emailjs
-    //     .sendForm(
-    //       "service_iyih0jt",
-    //       "template_9mcw1oi",
-    //       form.current,
-    //       "pWK-1B7t6ZNPqH79e"
-    //     )
-    //     .then(
-    //       (result) => {
-    //         setEmailSent(true);
-    //       },
-    //       (error) => {
-    //         console.log(error.text);
-    //       }
-    //     );
+    emailjs
+      .sendForm(
+        "service_iyih0jt",
+        "template_9mcw1oi",
+        form.current,
+        "pWK-1B7t6ZNPqH79e"
+      )
+      .then(
+        (result) => {
+          setEmailSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
-    // THIS IS FOR SENDGRID FETCH
-    // fetch(
-    //   "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       from: email,
-    //       name: name,
-    //       subject: subject,
-    //       phone: phone,
-    //       message: message,
-    //       location: location,
-    //       messageOptional: messageOptional,
-    //     }),
-    //   }
-    // )
-    //   .then((response) => {
-    //     if (response.ok) {
-    //       setShowModal(true);
-    //       setEmailSent(true);
-    //       setName("");
-    //       setEmail("");
-    //       setPhone("");
-    //       setMessage("");
-    //       setLocation("");
-    //       setMessageOptional("");
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
+    fetch(
+      "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: email,
+          name: name,
+          subject: subject,
+          phone: phone,
+          message: message,
+          location: location,
+          messageOptional: messageOptional,
+        }),
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          setShowModal(true);
+          setEmailSent(true);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
+          setLocation("");
+          setMessageOptional("");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setShowModal(true);
   };
 
@@ -116,7 +115,7 @@ export const Contact = () => {
                 type="text"
                 id="name"
                 name="from_name"
-                // required
+                required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -133,7 +132,7 @@ export const Contact = () => {
                 id="email"
                 pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
                 name="reply_to_email"
-                // required
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -151,7 +150,7 @@ export const Contact = () => {
                 pattern="^\+?\d{1,3}[- ]?\d{3,4}[- ]?\d{4}$"
                 name="reply_to_number"
                 value={phone}
-                // required
+                required
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
@@ -165,7 +164,7 @@ export const Contact = () => {
                 placeholder="Location*"
                 type="text"
                 id="location"
-                // required
+                required
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
               />
