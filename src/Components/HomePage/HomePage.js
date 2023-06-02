@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import heroImage from "../SiteImg/landing-hero-img.png";
 import twoDrinks from "../SiteImg/landing-mid-image.png";
-import strawberries from "../SiteImg/landing-strawberries.png";
+import strawberriesVideo from "../SiteImg/strawberries-video.mov";
 
 const HomePage = () => {
   return (
@@ -28,10 +28,13 @@ const HomePage = () => {
         Amoria is all about our love for tea.
       </h2>
       <div className="flex flex-col lg:flex-row px-8 gap-8 items-center justify-center">
-        <img
-          src={strawberries}
+        <video
           alt="Strawberries"
-          className="w-full md:w-1/2"
+          className="h-176"
+          src={strawberriesVideo}
+          autoPlay
+          muted
+          loop
         />
         <div className="bg-[#F8E8D4] text-2xl px-8 md:px-20 py-10 md:w-176 w-full">
           We place a big emphasis on what goes into our drinks. Teas imported
