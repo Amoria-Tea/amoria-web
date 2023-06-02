@@ -6,7 +6,7 @@ function Footer(props) {
   const date = new Date();
   const year = date.getFullYear();
     return (
-      <footer class="bg-gray-100">
+      <footer class="footerbgc">
   <div
     class="relative max-w-screen px-4 py-2 mx-auto sm:px-6 lg:px-8 lg:pt-8"
   >

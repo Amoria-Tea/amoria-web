@@ -1,5 +1,5 @@
 html {
-  background: white;
+  background: #FFF9F0;
   background-repeat: no-repeat;
   background-size: auto 150%;
 }
@@ -21,6 +21,16 @@ strong {
   font-size: 45px;
 }
 
+.comic-bg {
+  background-color: #FFF9F0;
+  display: flex;
+  justify-content: center;
+}
+
+.footerbgc {
+  background-color: #FAEFDF
+}
+
 .grayLoadMain {
   background-color: rgb(220, 220, 220);
 }
@@ -37,10 +47,6 @@ strong {
 .avenir {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.about-container-comic {
-  background-color: #f3e0c2;
 }
 
 .underlined {
@@ -223,9 +229,7 @@ strong {
 
 .comic-container {
   display: flex;
-  width: 100%;
   margin-right: 24px;
-  background-color: #eb905a;
 }
 
 @media only screen and (min-width: 640px) {
@@ -235,8 +239,8 @@ strong {
   }
 
   .poppins-bolded-responsive {
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -252,6 +256,13 @@ strong {
 
   .border-bottom-our-story {
     border-bottom: 0px;
+  }
+
+  .comic-container {
+    display: flex;
+    width: 110%;
+    margin-right: 24px;
+    background-color: #eb905a;
   }
 
   /* About */
@@ -368,8 +379,8 @@ strong {
   }
 
   .poppins-bolded-responsive {
-    font-family: "Poppins", sans-serif;
-    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
     font-weight: 700;
   }
 
@@ -406,25 +417,21 @@ strong {
   .tea-making-man4 {
     transform: translate3d(0, 0, 0);
     transition: 0.25s all ease-in-out;
-    animation: fadeInOutAnimationBottom 1s;
   }
 
   .tea-making-man3 {
     transform: translate3d(0, 0, 0);
     transition: 0.25s all ease-in-out;
-    animation: fadeInOutAnimationLeft 1s;
   }
 
   .tea-making-man2 {
     transform: translate3d(0, 0, 0);
     transition: 0.25s all ease-in-out;
-    animation: fadeInOutAnimationTop 1s;
   }
 
   .tea-making-man {
     transform: translate3d(0, 0, 0);
     transition: 0.25s all ease-in-out;
-    animation: fadeInOutAnimationRight 1s;
   }
 
   .man-making-tea-container {
@@ -484,8 +491,8 @@ strong {
   }
 
   .poppins-bolded-responsive {
-    font-family: "Poppins", sans-serif;
-    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
     font-weight: 700;
   }
 
@@ -506,6 +513,11 @@ strong {
     background: url("https://i.imgur.com/vTHCGGG.jpg") center center no-repeat;
     background-size: cover;
     height: 1000px;
+  }
+
+  .comic-h {
+    height: 100%;
+    width: 75%;
   }
 }
 
