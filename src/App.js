@@ -8,7 +8,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DecorationBanner from "./Components/HomePage/DecorationBanner";
 import Intro from "./Components/HomePage/Intro";
 import Contact from "Components/Contact/Contact";
-import Visit from "./Components/VisitComponents/Visit"
+import Visit from "./Components/VisitComponents/Visit";
+import HomePage from "Components/HomePage/HomePage";
+import { ModalProvider } from "Components/context/Modal";
 function App() {
   //ToDo: Ctrl Shift F
   //General Task List:
@@ -29,16 +31,24 @@ function App() {
             <Route
               path="/"
               element={
-                <>
-                  <DecorationBanner />
-                  <Intro />
-                </>
+                <HomePage />
+                // <>
+                //   <DecorationBanner />
+                //   <Intro />
+                // </>
               }
             ></Route>
             <Route path="/Menu" element={<Menu />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="visitus" element={<Visit Us />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
+            <Route
+              path="/contact"
+              element={
+                <ModalProvider>
+                  <Contact />
+                </ModalProvider>
+              }
+            ></Route>
           </Routes>
         </div>
         <Footer />

@@ -19,7 +19,7 @@ function Nav(props) {
                 Header navigation
               </h2>
               <div className="nav-ul-container">
-                <ul className="flex items-center gap-7 text-sm sm:text-2xl">
+                <ul className="flex items-center gap-12 text-sm sm:text-2xl">
                   <li className="">
                     <NavLink
                       onClick={onThisNavComponent}
