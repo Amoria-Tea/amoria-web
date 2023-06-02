@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./Visit.css";
+import "./Visit.module.css";
 //scroll into view then fade in
 
 function Visit(props) {
