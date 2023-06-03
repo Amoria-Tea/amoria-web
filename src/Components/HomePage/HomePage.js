@@ -33,6 +33,7 @@ const HomePage = () => {
           className="h-176"
           src={strawberriesVideo}
           autoPlay
+          playsInline
           muted
           loop
         />
