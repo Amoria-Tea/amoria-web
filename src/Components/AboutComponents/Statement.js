@@ -18,8 +18,8 @@ function Statement(props) {
                     <br/>
                         <strong className='poppins-bolded-responsive'> <h2 className='poppins-bolded-responsive font-bold'>We are Amoria Tea!</h2> </strong> 
                     <br/>
-                        <p class="mb-4 text-center sm:text-center font-light">
-                        an up and coming environmentally conscious and experience <br/> oriented bubble tea shop here in NJ. 
+                        <p class="mb-2 sm:mb-4 lg:mb-8 p-2 text-center sm:text-center font-light">
+                        an up and coming environmentally conscious and experience oriented bubble tea shop here in NJ. 
                         </p>
                 </div>
                 <div class="flex justify-center gap-12">
