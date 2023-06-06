@@ -79,7 +79,7 @@ export const Contact = () => {
 
   return (
     <div class="flex justify-center">
-      <div class="max-w-screen-2xl">
+      <div class="max-w-screen-2xl mt-8">
         <div id="background_bulkorder">
           <div class="backgroundbubbleanimation flex justify-center">
             <h1 class="text-center absolute text-2xl sm:text-4xl font-semibold poppin_contact sm:top-80 text-gray-600">
