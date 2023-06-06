@@ -2,7 +2,7 @@ import React from "react";
 import VisitCalendar from "./VisitCalendar";
 import VisitEvents from "./VisitEvents";
 import "react-calendar/dist/Calendar.css";
-import "./Visit.css";
+import "./visit.css";
 
 function Visit(props) {
   return (
