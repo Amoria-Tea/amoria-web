@@ -21,6 +21,11 @@ strong {
   font-size: 45px;
 }
 
+
+.menu-border {
+  border-top: 1px solid #3E3E3E;
+}
+
 .tea-making-man {
   width: 75%;
   height: 95%;
@@ -192,6 +197,7 @@ strong {
   font-family: "Poppins", sans-serif;
   color: black;
   font-size: 32px;
+  margin-top: 40px;
 }
 
 .menu {

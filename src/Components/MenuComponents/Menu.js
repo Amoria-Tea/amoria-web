@@ -9,7 +9,7 @@ function Menu() {
   const [currProducts, setCurrProducts] = useState([]);
 
   return (
-    <div className="border-t border-[#3E3E3E] py-10 my-10">
+    <div className="menu-border py-10 my-8">
       <ul className="grid grid-cols-5 text-center md:text-lg text-xs px-2">
         <li>
           <button

@@ -21,13 +21,13 @@ const HomePage = () => {
         </div>
         <img src="https://amoria-tea-assets.s3.us-east-2.amazonaws.com/landing-mid-image.png" alt="Two Drinks" className="z-0" />
       </div>
-      <h2 className="text-5xl font-bold my-8 mx-2 md:my-10">
+      <h2 className="text-2xl sm:text-5xl font-bold mx-2 my-8 px-2 lg:my-0">
         Amoria is all about our love for tea.
       </h2>
-      <div className="flex flex-col lg:flex-row px-8 gap-8 items-center justify-center">
+      <div className="flex flex-col lg:flex-row px-8 sm:gap-8 items-center justify-center">
         <video
           alt="Strawberries"
-          className="h-176"
+          className="h-96 mb-8 sm:h-176"
           src="https://amoria-tea-assets.s3.us-east-2.amazonaws.com/strawberries-video.mov"
           autoPlay
           playsInline
