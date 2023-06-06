@@ -240,6 +240,8 @@ strong {
   border-radius: 4px;
 }
 
+.comic-container {}
+
 @media only screen and (min-width: 640px) {
   .modal-menu {
     width: 90%;
