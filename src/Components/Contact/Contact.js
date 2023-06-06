@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import bobas from "../SiteImg/bulk order bbt.png";
 import "./ContactUs.css";
 import ContactConfirmation from "./ContactConfirmation";
@@ -25,22 +25,22 @@ export const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_iyih0jt",
-        "template_9mcw1oi",
-        form.current,
-        "pWK-1B7t6ZNPqH79e"
-      )
-      .then(
-        (result) => {
-          setEmailSent(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // e.preventDefault();
+    // emailjs
+    //   .sendForm(
+    //     "service_iyih0jt",
+    //     "template_9mcw1oi",
+    //     form.current,
+    //     "pWK-1B7t6ZNPqH79e"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       setEmailSent(true);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
 
     fetch(
       "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
