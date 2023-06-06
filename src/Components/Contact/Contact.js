@@ -75,7 +75,6 @@ export const Contact = () => {
       .catch((error) => {
         console.log(error);
       });
-    setShowModal(true);
   };
 
   return (
@@ -100,7 +99,7 @@ export const Contact = () => {
         </p>
         <div class="grid mt-4 px-4">
           <form
-            class="space-y-4 shadow-lg p-2 m-8 sm:p-4 rounded-lg min-w-2xl"
+            class="space-y-4 shadow-lg p-4 sm:p-6 m-8 rounded-lg min-w-2xl"
             onSubmit={sendEmail}
             ref={form}
           >
