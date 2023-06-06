@@ -21,10 +21,23 @@ strong {
   font-size: 45px;
 }
 
+.tea-making-man {
+  width: 75%;
+}
+
+.tea-making-man2 {
+  display: none;
+}
+
+.tea-making-man4 {
+  display: none;
+}
+
 .comic-bg {
   background-color: #FFF9F0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .footerbgc {
@@ -227,11 +240,6 @@ strong {
   border-radius: 4px;
 }
 
-.comic-container {
-  display: flex;
-  margin-right: 24px;
-}
-
 @media only screen and (min-width: 640px) {
   .modal-menu {
     width: 90%;
@@ -411,9 +419,32 @@ strong {
     background-size: cover;
     height: 800px;
   }
+
+  .tea-making-man {
+    width: 45%;
+  }
+
+  .tea-making-man2 {
+    width: 45%;
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .tea-making-man {
+    width: 29%;
+  }
+
+  .tea-making-man2 {
+    width: 29%;
+  }
+
+  .tea-making-man4 {
+    width: 29%;
+    display: block;
+  }
+
   .tea-making-man4 {
     transform: translate3d(0, 0, 0);
     transition: 0.25s all ease-in-out;
@@ -517,7 +548,7 @@ strong {
 
   .comic-h {
     height: 100%;
-    width: 75%;
+    width: 100%;
   }
 }
 
