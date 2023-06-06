@@ -18,14 +18,14 @@ function Statement(props) {
                     <br/>
                         <strong className='poppins-bolded-responsive'> <h2 className='poppins-bolded-responsive font-bold'>We are Amoria Tea!</h2> </strong> 
                     <br/>
-                        <p class="mb-12 text-center sm:text-center font-light">
+                        <p class="mb-4 text-center sm:text-center font-light">
                         an up and coming environmentally conscious and experience <br/> oriented bubble tea shop here in NJ. 
                         </p>
                 </div>
-                <div class="paddingpercent flex justify-center gap-12 p-4 mb-12">
+                <div class="flex justify-center gap-12">
                     <img className='tea-making-man2 rounded-full hidden xl:block' id="manSellingTea" src={mikeSellingBoba} alt="man selling tea" />
                     <img className='tea-making-man4 rounded-full hidden xl:block' id="manSellingTea" src={groupphoto1} alt="man selling tea" />
-                    <img className='tea-making-man rounded-full' id="manSellingTea" src={sellingBoba} alt="man finishing tea"/>
+                    <img className='tea-making-man rounded-full' src={sellingBoba} alt="man finishing tea"/>
                 </div>
             </div>
         </div>

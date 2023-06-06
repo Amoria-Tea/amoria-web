@@ -23,6 +23,7 @@ strong {
 
 .tea-making-man {
   width: 75%;
+  height: 95%;
 }
 
 .tea-making-man2 {
@@ -277,6 +278,12 @@ strong {
 
   /* About */
 
+
+  .tea-making-man {
+    width: 67%;
+    margin-bottom: 2.5%;
+  }
+
   /* About Animation */
 
   @keyframes fadeInOutAnimationRight {
@@ -350,6 +357,8 @@ strong {
     background-size: cover;
     height: 600px;
   }
+
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -424,11 +433,13 @@ strong {
 
   .tea-making-man {
     width: 45%;
+    margin-bottom: 4%;
   }
 
   .tea-making-man2 {
     width: 45%;
     display: block;
+    margin-bottom: 4%;
   }
 }
 
@@ -445,6 +456,7 @@ strong {
   .tea-making-man4 {
     width: 29%;
     display: block;
+    margin-bottom: 4%;
   }
 
   .tea-making-man4 {
@@ -555,7 +567,3 @@ strong {
 }
 
 /* About Page */
-
-#manSellingTea {
-  height: 675px;
-}
