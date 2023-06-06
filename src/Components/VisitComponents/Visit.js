@@ -11,7 +11,7 @@ function Visit(props) {
 <iframe src="https://embed.styledcalendar.com/#nA5fTtBlRGyAHYruKtIA" height="1000px" width="100%"></iframe>
     </div> */}
       <div className="w-full">
-        <div className="calendar-container mb-12 mt-8 relative m-auto w-[90%]">
+        {/* <div className="calendar-container mb-12 mt-8 relative m-auto w-[90%]">
           <div className="absolute flex justify-between items-center w-full top-10 md:px-10 px-8">
             <button
               onClick={handlePrevMonth}
@@ -33,7 +33,7 @@ function Visit(props) {
             </button>
           </div>
           <Calendar onChange={setDate} value={date} />
-        </div>
+        </div> */}
         <VisitEvents />
         <VisitCalendar />
       </div>
