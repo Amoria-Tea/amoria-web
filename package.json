@@ -16,6 +16,7 @@
     "fslightbox-react": "^1.6.2-2",
     "lightbox2": "^2.11.3",
     "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.3",
     "react-calendar": "^4.2.1",
     "react-dom": "^18.2.0",
     "react-modal": "^3.15.1",

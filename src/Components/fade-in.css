@@ -38,6 +38,10 @@
   animation: fade-in 1.5s;
 }
 
+.fade-in-3 {
+  animation: fade-in 3s;
+}
+
 .fadeInLeft {
   transition: 0.25s all ease-in-out;
   animation: fadeInOutAnimationLeft 1s;
