@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <section className="flex flex-col items-center justify-center lg:gap-20 mt-2 mb-8 text-center">
+    <section className="flex flex-col items-center justify-center lg:gap-20 mt-5 sm:mt-8 mb-8 text-center">
       <img src="https://amoria-tea-assets.s3.us-east-2.amazonaws.com/landing-hero-img.png" alt="Hero" />
       <div className="relative xl:w-304 lg:w-[90%] w-full flex lg:flex-row flex-col justify-end">
         <div className="lg:absolute flex flex-col items-center justify-center bg-[#F8E8D4] gap-6 text-center p-10 left-0 lg:top-1/2 lg:-translate-y-1/2 z-10 h-96 lg:w-[40%] w-full">
