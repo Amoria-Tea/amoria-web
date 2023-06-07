@@ -31,9 +31,10 @@ const VisitEvents = () => {
   const [currDate] = useState(new Date());
 
   return (
-    <div className="p-20">
-      <h3 className="text-2xl font-bold">Upcoming Events!</h3>
-      <ul className="mt-10 flex flex-col gap-10">
+    <>
+    <h3 className="text-2xl font-bold flex justify-center mt-8">Upcoming Events!</h3>
+    <div className="px-16 sm:px-32">
+      <ul className="mt-8 flex flex-col gap-10">
         {events.map((event) => {
           if (event.date.getMonth() === currDate.getMonth()) {
             return (
@@ -56,6 +57,7 @@ const VisitEvents = () => {
         })}
       </ul>
     </div>
+  </>
   );
 };
 

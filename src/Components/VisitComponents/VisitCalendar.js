@@ -57,7 +57,7 @@ const VisitCalendar = () => {
   };
 
   return (
-    <div className="calendar-container mb-12 mt-12 relative m-auto w-[90%]">
+    <div className="calendar-container mb-12 mt-8 relative m-auto w-[90%]">
       <div className="absolute flex justify-between items-center w-full top-10 md:px-10 px-8">
         <button
           onClick={handlePrevMonth}
