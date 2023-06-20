@@ -43,13 +43,14 @@ export const Contact = () => {
     //   );
 
     fetch(
-      "https://bsqu7rgpkn2y2mfffbaw5gefsi0ymtpb.lambda-url.us-west-2.on.aws/",
+      "https://h926ohbcbf.execute-api.us-west-2.amazonaws.com/test/emailapi",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          reply_to_email: email,
           from: email,
           name: name,
           subject: subject,
