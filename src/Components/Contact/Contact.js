@@ -50,7 +50,7 @@ export const Contact = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: email,
+          to_email: email,
           name: name,
           subject: subject,
           phone: phone,
@@ -128,9 +128,9 @@ export const Contact = () => {
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100"
                 placeholder="Email address*"
                 type="email"
-                id="email"
+                id="to_email"
                 pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
-                name="email"
+                name="to_email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
