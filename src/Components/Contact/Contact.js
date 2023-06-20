@@ -130,7 +130,7 @@ export const Contact = () => {
                 type="email"
                 id="email"
                 pattern="^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b$"
-                name="to_email"
+                name="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
