@@ -27,6 +27,10 @@ const openMap = (address) => {
   window.open(`https://maps.google.com/maps?q=${encodeURIComponent(address)}`);
 };
 
+const openLink = (link) => {
+  window.open(link);
+}
+
 const VisitEvents = () => {
   const [currDate] = useState(new Date());
 
@@ -39,7 +43,8 @@ const VisitEvents = () => {
           if (event.date.getMonth() === currDate.getMonth()) {
             return (
               <li key={event.name} className="gap-2 flex flex-col">
-                <h4 className="text-xl font-bold">{event.name}</h4>
+                <h4 className="cursor-pointer hover:underline decoration-dotted text-xl font-bold" 
+                onClick={() => openLink(event.eventLink)}>{event.name}</h4>
                 <p>{formatDate(event.date, event.end)}</p>
                 <div className="flex items-center gap-2">
                   <i className="fa-solid fa-location-dot" />
