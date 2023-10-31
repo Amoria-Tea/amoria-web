@@ -26,21 +26,21 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // emailjs
-    //   .sendForm(
-    //     "service_iyih0jt",
-    //     "template_9mcw1oi",
-    //     form.current,
-    //     "pWK-1B7t6ZNPqH79e"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       setEmailSent(true);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_qk2ol8k",
+        "template_fcln5dn",
+        form.current,
+        "EOzFT-eo3WR3e7NyL"
+      )
+      .then(
+        (result) => {
+          setEmailSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
     fetch(
       "https://h926ohbcbf.execute-api.us-west-2.amazonaws.com/test/emailapi",
