@@ -27,7 +27,7 @@ export const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
+    .sendForm(
         "service_qk2ol8k",
         "template_fcln5dn",
         form.current,
@@ -42,39 +42,39 @@ export const Contact = () => {
         }
       );
 
-    fetch(
-      "https://h926ohbcbf.execute-api.us-west-2.amazonaws.com/test/emailapi",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          to_email: email,
-          name: name,
-          subject: subject,
-          phone: phone,
-          message: message,
-          location: location,
-          messageOptional: messageOptional,
-        }),
-      }
-    )
-      .then((response) => {
-        if (response.ok) {
-          setShowModal(true);
-          setEmailSent(true);
-          setName("");
-          setEmail("");
-          setPhone("");
-          setMessage("");
-          setLocation("");
-          setMessageOptional("");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // fetch(
+    //   "https://h926ohbcbf.execute-api.us-west-2.amazonaws.com/test/emailapi",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       to_email: email,
+    //       name: name,
+    //       subject: subject,
+    //       phone: phone,
+    //       message: message,
+    //       location: location,
+    //       messageOptional: messageOptional,
+    //     }),
+    //   }
+    // )
+      // .then((response) => {
+      //   if (response.ok) {
+      //     setShowModal(true);
+      //     setEmailSent(true);
+      //     setName("");
+      //     setEmail("");
+      //     setPhone("");
+      //     setMessage("");
+      //     setLocation("");
+      //     setMessageOptional("");
+      //   }
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      // });
   };
 
   return (
