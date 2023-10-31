@@ -36,6 +36,14 @@ export const Contact = () => {
       .then(
         (result) => {
           setEmailSent(true);
+          setShowModal(true);
+          setEmailSent(true);
+          setName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
+          setLocation("");
+          setMessageOptional("");
         },
         (error) => {
           console.log(error.text);
