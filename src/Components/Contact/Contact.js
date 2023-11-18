@@ -24,11 +24,12 @@ export const Contact = () => {
   //fetch
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmails = (e) => {
     e.preventDefault();
+    // send email to mike@amoriatea.com
     emailjs
     .sendForm(
-        "service_qk2ol8k",
+        "email-confirmation",
         "template_fcln5dn",
         form.current,
         "EOzFT-eo3WR3e7NyL"
@@ -49,40 +50,6 @@ export const Contact = () => {
           console.log(error.text);
         }
       );
-
-    // fetch(
-    //   "https://h926ohbcbf.execute-api.us-west-2.amazonaws.com/test/emailapi",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       to_email: email,
-    //       name: name,
-    //       subject: subject,
-    //       phone: phone,
-    //       message: message,
-    //       location: location,
-    //       messageOptional: messageOptional,
-    //     }),
-    //   }
-    // )
-      // .then((response) => {
-      //   if (response.ok) {
-      //     setShowModal(true);
-      //     setEmailSent(true);
-      //     setName("");
-      //     setEmail("");
-      //     setPhone("");
-      //     setMessage("");
-      //     setLocation("");
-      //     setMessageOptional("");
-      //   }
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
   };
 
   return (
@@ -108,7 +75,7 @@ export const Contact = () => {
         <div class="grid mt-4 px-4">
           <form
             class="space-y-4 shadow-lg p-4 sm:p-6 m-8 rounded-lg min-w-2xl"
-            onSubmit={sendEmail}
+            onSubmit={sendEmails}
             ref={form}
           >
             <div>
@@ -172,6 +139,7 @@ export const Contact = () => {
                 type="text"
                 id="location"
                 required
+                name="location"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
               />
@@ -216,9 +184,9 @@ export const Contact = () => {
               <textarea
                 class="w-full rounded-lg shadow-md p-3 text-sm border-2 border-gray-100 resize-none"
                 placeholder="Questions and specific request."
-                rows="8"
-                id="message"
-                name="message"
+                rows="9"
+                id="questions_comments"
+                name="questions_comments"
                 value={messageOptional}
                 onChange={(e) => setMessageOptional(e.target.value)}
               ></textarea>
