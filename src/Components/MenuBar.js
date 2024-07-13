@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function MenuBar(props) {
     return (
 <div className="MenuBar">
-    <div class="flex justify-start">
+    <div class="flex justify-start gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12">
     <div className='neutral-block'>
     <div class="flex space-x-8">
         <Link to="/">

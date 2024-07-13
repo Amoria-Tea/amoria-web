@@ -19,7 +19,7 @@ function Nav(props) {
                 Header navigation
               </h2>
               <div className="nav-ul-container">
-                <ul className="flex items-center gap-12 text-xs sm:text-lg lg:text-2xl">
+              <ul className="flex items-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 text-sm sm:text-lg lg:text-2xl">
                   <li className="">
                     <NavLink
                       onClick={onThisNavComponent}
@@ -49,6 +49,18 @@ function Nav(props) {
                   </li>
                   <li className="">
                     <NavLink
+                      to="/catering"
+                      className={({ isActive }) =>
+                        isActive
+                          ? "font-bold"
+                          : "transition hover:text-black/75 active:font-extrabold"
+                      }
+                    >
+                      Catering
+                    </NavLink>
+                  </li>
+                  {/* <li className="">
+                    <NavLink
                       to="/visitus"
                       className={({ isActive }) =>
                         isActive
@@ -58,7 +70,7 @@ function Nav(props) {
                     >
                       Visit Us
                     </NavLink>
-                  </li>
+                  </li> */}
                   <li className="">
                     <NavLink
                       to="/contact"
@@ -68,7 +80,7 @@ function Nav(props) {
                           : "transition hover:text-black/75 active:font-extrabold"
                       }
                     >
-                      Contact
+                      Contact Us
                     </NavLink>
                   </li>
                 </ul>

@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DecorationBanner from "./Components/HomePage/DecorationBanner";
 import Intro from "./Components/HomePage/Intro";
 import Contact from "Components/Contact/Contact";
+import Catering from "Components/Catering/Catering";
 import Visit from "./Components/VisitComponents/Visit";
 import HomePage from "Components/HomePage/HomePage";
 import { ModalProvider } from "Components/context/Modal";
@@ -40,6 +41,7 @@ function App() {
             ></Route>
             <Route path="/Menu" element={<Menu />}></Route>
             <Route path="/about" element={<About />}></Route>
+            <Route path="/catering" element={<Catering />}></Route>
             <Route path="visitus" element={<Visit Us />}></Route>
             <Route
               path="/contact"
