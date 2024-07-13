@@ -1,0 +1,30 @@
+/* CompanyLogos.css */
+.company-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .company-item {
+    box-sizing: border-box;
+    flex: 1 0 21%; /* Adjust the percentage to control the size of the logos */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure logos don't spill out */
+    width: 150px; /* Set fixed width for consistency */
+    height: 100px; /* Set fixed height for consistency */
+  }
+  
+  .company-item img {
+    width: 100%;
+    height: 100%;
+    @media (max-width: 480px) {
+      width: 60%;
+      height: 60%;
+    }
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  }
+  

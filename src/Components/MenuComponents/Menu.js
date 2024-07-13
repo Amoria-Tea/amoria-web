@@ -10,13 +10,15 @@ function Menu() {
 
   return (
     <div className="menu-border py-10 my-8">
-      <ul className="grid grid-cols-5 text-center md:text-lg text-xs px-2">
-        <li>
+    <h2 className="text-center text-lg italic mb-4">
+      Note: Menu subject to change, please contact us for the most up-to-date menu.
+    </h2>
+    <ul className="flex flex-wrap justify-center items-center text-center md:text-lg text-xs px-2 gap-2 md:gap-4 lg:gap-6">  <li>
           <button
             onClick={() => setPage(1)}
             className={`${page === 1 ? "font-bold" : ""}`}
           >
-            Categories
+            All
           </button>
         </li>
         {products.map((category) => {

@@ -34,7 +34,7 @@ const products = [
       {
         name: "Matcha Coffee",
         description:
-          "Ceremonial grade matcha, speciality grade coffee espresso shot.",
+          "Ceremonial grade matcha, Espresso shot.",
         special: "Choice of dairy.",
         image: matchaCoffeeImg,
       },
